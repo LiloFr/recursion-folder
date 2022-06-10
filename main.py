@@ -38,9 +38,19 @@ def duplicate(a: dict):
             yield result_key, copies[result_key]
 
 
-def my_print():
-    pass
+def my_print(x):
+    for key, value in x:
+        print((key[0], key[1]), *value, sep='\n')
+        print()
 
 
 if __name__ == '__main__':
-    pass
+    p = way()
+    s = dictionary(p)
+    print('Обход папок завершен')
+    time.sleep(1)
+    print('Вывод файлов:')
+    time.sleep(2)
+    r = duplicate(s)
+    my_print(r)
+    print('Вывод файлов завершен')
